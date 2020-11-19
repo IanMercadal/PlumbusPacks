@@ -151,17 +151,25 @@ article.row{
     clear: both;
     margin-top: 10px;
     overflow: auto;
+    float: left;
+    
 }
-article.rowpack{
+article.rowPack{
     column-count: 1;
     column-rule: 1px solid lightblue;
     display: block;
+    clear: both;
     width:100%;
-    -moz-column-fill: auto;
-    column-fill: auto;
 }
 article.column {
     float: left;
+    width: 100%;
+    flex: 50%;
+    padding: auto;
+    clear: both;
+    height: auto;
+}
+article.columnPack{
     width: 100%;
     flex: 50%;
     height: auto;

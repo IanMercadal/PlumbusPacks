@@ -5,16 +5,17 @@ body{
     background-color: #B1D4E0;
 }
 marquee {
-    height: 30px;
+    height: auto;
     overflow: hidden;
     position: relative;
     background:#2E8BC0;
     color: #333;
     border-radius: 7px;
+    
 }
 /* Estilos para los títulos */
 h1{
-        font-family: 'Nunito', sans-serif;
+    
 
 }
 h2{
@@ -22,7 +23,7 @@ h2{
 }
 h3{
     text-align: center;
-    float: left;
+    clear: both;
 
 }
 h4{
@@ -48,7 +49,7 @@ hr{
     color: #C85250;
 }
 /* Estilos para los menus */
-#menu li a {
+ul#menu li a {
     
     font-size: 18px;
     text-decoration: none;
@@ -57,18 +58,26 @@ hr{
     margin-left: 0px;
     background-color: #0C2D48;
     color: #fff;
+    width: auto;
+    height: auto;
+    display: inline;
     }
 ul#menu li {
      display: inline;
      float: left;
+     display: inline;
     }
 ul#menu {
     list-style-type: none;
+    float: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color:#0C2D48;
     border-radius: 7px;
+    width: auto;
+    height: auto;
+    
     }
       
 ul#menu li a {
@@ -78,22 +87,23 @@ ul#menu li a {
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        display: inline;
       }
       
 ul#menu li a:hover {
         background-color: rgb(255, 255, 255);
+        display: inline;
       }
-ul.productosnodef {
-    text-align: left;
-    margin-top: 20px;
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
-}
-ul.productosnodef li{
-    text-align: left;
-}
+
 ul.listapacks{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+ul.listapacks li{
+    width: 100%;
     clear: both;
 }
 ul.footer li{
@@ -125,8 +135,8 @@ img.principal{
     border-radius: 7px;
 }
 img.tabla{
-    width: 250px;
-    height: 250px;
+    max-width: 100%;
+    height: auto;
 }
 img.imgdetallada{
     float: left;
@@ -138,48 +148,56 @@ img.imgdetallada{
 }
 
 
-/*Estilos para los articles*/
-article.packdetallado{
-    margin-left: auto;
-    margin-right: auto;
+/*Estilos para los articles y sections*/
+
+section.columnas {
+    width: 1200px;
+    height: auto;
+  }
+article.columna{
+    width: auto;
+    height: auto;
 }
-article.row{
-    column-count: 5;
-    column-rule: 1px solid lightblue;
-    display: block;
-    width:100%;
-    clear: both;
-    margin-top: 10px;
-    overflow: auto;
-    float: left;
+
+
+article.galeria{
+    height: calc( 300px + 3em);
+    width: 260px;
+    margin:1em auto;
+    position: relative;
     
 }
-article.rowPack{
-    column-count: 1;
-    column-rule: 1px solid lightblue;
-    display: block;
-    clear: both;
-    width:100%;
+
+article.galeria img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 3s;
 }
-article.column {
-    float: left;
-    width: 100%;
-    flex: 50%;
-    padding: auto;
-    clear: both;
-    height: auto;
+
+article.galeria input[type=radio] {
+    position: relative;
+    bottom: calc(-300px - 1.5em);
+    left: .5em;
 }
-article.columnPack{
-    width: 100%;
-    flex: 50%;
-    height: auto;
+
+article.galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
+    opacity: 1;
 }
-article.Packdescripcion{
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    align-content: center;
+
+article.galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
+    opacity: 1;
 }
+
+article.galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
+    opacity: 1;
+}
+
+article.galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
+    opacity: 1;
+}
+
 section.columnfooter {
     clear: both;
     float: left;
@@ -188,15 +206,43 @@ section.columnfooter {
     width: 100%;
 }
 /* Estilos para la tabla */
-table.tabla tr.Enunciados th {
+table.productosnodef{
+    float: left;
+    clear: both;
     text-align: center;
+    margin: 25px;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse; 
+    border: 4px solid #0C2D48;
+    border-radius: 10px;
+}
 
+table.productosnodef td.descripcion p{
+    width: 250px;
+    height: 250px;
+    float: left;
+    clear: both;
+    text-align: justify;
+    margin: auto;
 }
-table.tabla td {
+table.productosnodef td.precio p{
+    width: 250px;
+    height: 250px;
+    float: center;
+    clear: both;
     text-align: center;
+    margin: 25px;
 }
-table.tabla th {
-    text-align: center;
+
+table.productosnodef ul{
+    width: 250px;
+    height: 250px;
+    float: left;
+    clear: both;
+    text-align: justify;
+    margin: 25px;
+
 }
 /* Estilos para los enlaces */
 a:visited {
@@ -229,7 +275,9 @@ footer {
     clear:both;
     color: #fff;
     border-radius: 7px;
-    
+    width: auto;
+    height: auto;
+    display: block;
 }
 iframe.footer{
     clear: both;

@@ -150,52 +150,24 @@ img.imgdetallada{
 
 /*Estilos para los articles y sections*/
 
-section.columnas {
-    width: 1200px;
-    height: auto;
-  }
-article.columna{
+section.row {
+    columns: 5;
     width: auto;
     height: auto;
+    clear: both;
+    grid-auto-columns: auto;
 }
-
-
-article.galeria{
-    height: calc( 300px + 3em);
-    width: 260px;
-    margin:1em auto;
-    position: relative;
-    
+section.rowPack {
+    columns: 3;
+    width: 1250px;
+    height: auto;
+    clear: both;
+    grid-auto-columns: auto;
 }
-
-article.galeria img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 3s;
-}
-
-article.galeria input[type=radio] {
-    position: relative;
-    bottom: calc(-300px - 1.5em);
-    left: .5em;
-}
-
-article.galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
-    opacity: 1;
-}
-
-article.galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
-    opacity: 1;
-}
-
-article.galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
-    opacity: 1;
-}
-
-article.galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
-    opacity: 1;
+article.columns{
+    width: 175px;
+    height: 450px;
+    padding: auto;
 }
 
 section.columnfooter {
@@ -204,6 +176,32 @@ section.columnfooter {
     width: 33.33%;
     flex: 50%;
     width: 100%;
+}
+div.Packname{
+    width: 175px;
+    height: 50px;
+    text-align: center;
+}
+div.Packimg{
+    width: 175px;
+    height: 175px;
+}
+div.Packlist{
+    width: 200px;
+    height: 200px;
+}
+div.PackTypeimg{
+    width: 200px;
+    height: 200px;
+}
+div.PackTypelist{
+    width: 500px;
+    height: auto;
+}
+
+div.PackPrice{
+    width: 500px;
+    height: auto;
 }
 /* Estilos para la tabla */
 table.productosnodef{

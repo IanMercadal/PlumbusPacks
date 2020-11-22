@@ -7,7 +7,10 @@
     <meta name="keywords" content="Packs de Bienvenida">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="estilos.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/cssL.css" rel="stylesheet" type="text/css" media="(min-width:1000px)" />
+    <link href="static/css/cssM.css" rel="stylesheet" type="text/css" media="(min-width:551px) and (max-width:999px)"  />
+    <link href="static/css/cssS.css" rel="stylesheet" type="text/css" media="(max-width:550px)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Plumbus Packs</title>
     <link rel="icon" type="image/jpg"  href="imagenes/plumbuslogo.png">
@@ -20,40 +23,58 @@
         <ul id="menu"><!--Nuestro menu de navegación-->
             <li><a href="index.html">Inicio</a></li>
             <li><a href="packs.html">Packs</a></li>
-            <li><a href=".html">Página por definir</a></li>
+            <li><a href="productos.html">Productos</a></li>
             </ul>
     </nav>
 
     <marquee direction="left">Posibles descuentos para que todo el mundo pueda disfrutar de los packs una vez sea legal hacer fiestas</marquee>
-    <h2>Pack Tacaño</h2>
+
+    <section class="rowPack">
+
+        <center><h2>Pack Deluxe</h2></center>
     
-    <article class="rowPack">
+            <article class="columns">
+                <h3>Precio: 10 euros</h3>
+            </article>
+    
+            <article>
+                <div class="galeria">
+                    <input type="radio" name="navegacion" id="_1" checked>
+                    <input type="radio" name="navegacion" id="_2">
+                    <input type="radio" name="navegacion" id="_3">
+                    <input type="radio" name="navegacion" id="_4">
+                    <input type="radio" name="navegacion" id="_5"> 
+                    <input type="radio" name="navegacion" id="_6">
+                    <input type="radio" name="navegacion" id="_7">   
+                    <img src="imagenes/boli.png" width="260" height="300" alt="Galeria CSS 1" />
+                    <img src="imagenes/lapiz.png" width="260" height="300" alt="Galeria CSS 2"  />
+                    <img src="imagenes/libreta.png" width="260" height="300" alt="Galeria CSS 3" />
+                    <img src="imagenes/agenda.png" width="260" height="300" alt="Galeria CSS 4" />
+                    <img src="imagenes/camisetapers.png" width="260" height="300" alt="Galeria CSS 5" />
+                    <img src="imagenes/raton.png" width="260" height="300" alt="Galeria CSS 6" />
+                    <img src="imagenes/sudadera.png" width="260" height="300" alt="Galeria CSS 7" />
+                </div>
+            </article>
+    
+                <article class="columnslist">
+                    <ul class="productosdef">
+                        <lh>Productos</lh>
+                        <br>
+                        <br>
+                        <li> Boli: Boli de tinta azul con un tamaño estandart, personalizable para el evento indicado y muy comodo para la escritura. </li>
+                        <li> Lápiz: Set de lápices HB recomendados para pintar. </li>
+                        <li> Libreta: Libreta de tapa dura con 80 hojas y tamaño A6. </li>
+                        <li> Agenda: Tapa blanda, color escogido por el cliente, tamaño A6 y calendario 2021. </li>
+                        <li> Camisetas: Camisetas con diferentes tañas y con el diseño deseado por el cliente.</li>
+                        <li> Ratón: Ratón no personalizable para ordenador. </li>
+                        <li> Sudadera: Sudadera de Rick and Morty con diferentes tallas y solo disponible en color negro. </li>
+                    </ul>
+          
+            </article>
+    
+                    
+        </section>
 
-        <article class="galeria">
-            <input type="radio" name="navegacion" id="_1" checked>
-            <input type="radio" name="navegacion" id="_2">
-            <input type="radio" name="navegacion" id="_3">
-            <input type="radio" name="navegacion" id="_4"> 
-            <img src="imagenes/camiseta.png" width="260" height="300" alt="Galeria CSS 1" />
-            <img src="" width="260" height="300" alt="Galeria CSS 2"  />
-            <img src="" width="260" height="300" alt="Galeria CSS 3" />
-            <img src="" width="260" height="300" alt="Galeria CSS 4" />
-        </article>
-        <br>
-        <br>
-        <br>
-        <br>
-        <article class="columnPack">
-            <ul class="listapacks">
-                <li><dl><b>Boli</b> = 1 x unidades = Un boli de tinta azul de la marca Pilot perfecto para apuntar sucesos de una gran fiesta.</dl></li>
-                <li><dl><b>Lápiz</b> = 1 x unidades = Un lápiz de marca standart que nos permite escribir.</dl></li>
-                <li><dl><b>Llavero</b> = 1 x unidades = Para decorar esas solitarias llaves que todos llevamos</dl></li>
-                <li><dl><b>Pegatina</b> = 1 x unidades = NO recomendable enseñarla a los niños porque el coche sufre un gran riesgo de tenerlo pegado.</dl></li>
-            </ul>
-            <h3>Precio: 2 euros</h3>
-        </article>
-
-    </article>
 
     <hr>
 

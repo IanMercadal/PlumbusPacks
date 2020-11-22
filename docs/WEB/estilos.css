@@ -142,8 +142,13 @@ img.principal{
     border-radius: 7px;
 }
 img.tabla{
-    max-width: auto;
-    height: auto;
+    width: 250px;
+    height: 250px;
+}
+img.Productimg{
+    width: 250px; 
+    height: 250px;
+    text-align: center;
 }
 img.imgdetallada{
     float: left;
@@ -161,8 +166,8 @@ section.row {
     width: 100%;
     height: auto;
     padding: 10px;
-    background-image: linear-gradient(to bottom right,#184f7c ,  #B1D4E0);
     border-radius: 7px;
+    
 }
 section.rowPack {
     columns: 1;
@@ -171,10 +176,12 @@ section.rowPack {
     background-image: linear-gradient(180deg, #184f7c ,  #B1D4E0);
     border-radius: 7px;
 }
-article.columns{
+
+article.column1{
     width: auto;
     height: auto;
-    text-align: center;
+    text-align: justify;
+    float: left;
     margin: 20px;
 }
 article.columnslist{
@@ -184,11 +191,7 @@ article.columnslist{
     margin-right: auto;
     margin-left: auto;
 }
-article.columnsimg{
-    width: auto;
-    height: auto;
-    text-align: center;
-}
+
 
 section.columnfooter {
     clear: both;
@@ -204,6 +207,10 @@ div.Packimg{
     width: 100%;
     height: auto;
 }
+div.Productimg{
+    width: 100%;
+    height: auto;
+}
 div.Packlist{
     text-align: center;
 }
@@ -212,7 +219,11 @@ div.PackPrice{
     width: auto;
     height: auto;
 }
-
+div.Product{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
 div.galeria {
     height: calc( 300px + 3em);
     width: 260px;

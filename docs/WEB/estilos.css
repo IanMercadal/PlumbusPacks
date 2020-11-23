@@ -1,35 +1,44 @@
 *{
     font-family: 'Quicksand', sans-serif;
+    
 }
 body{
-    background-color: #B1D4E0;
+    margin: auto;
+    align-content: center;
+    background-color: black;
+    max-width: 85%;
+    background-color: #F4EBD0;
 }
 marquee {
     height: auto;
     overflow: hidden;
     position: relative;
-    background:#2E8BC0;
+    background:#D6AD60;
     color: #333;
     border-radius: 7px;
     
 }
 /* Estilos para los títulos */
 h1{
-    
+    font-size: 40px;
 
 }
 h2{
+    font-size: 32px;
     clear: both;
 }
 h3{
+    font-size: 28px;
     text-align: center;
     clear: both;
 
 }
 h4{
+    font-size: 22px;
     clear: both;
 }
 h5{
+    font-size: 20px;
     clear: both;
 }
 h6{
@@ -52,16 +61,17 @@ ul#menu li a {
     float: left;
     padding: 10px;
     margin-left: 0px;
-    background-color: #0C2D48;
+    background-color: #523A28;
     color: #fff;
     width: auto;
     height: auto;
     display: inline;
     }
 ul#menu li {
+    text-align: center;
      display: inline;
      float: left;
-     display: inline;
+     
     }
 ul#menu {
     list-style-type: none;
@@ -69,11 +79,10 @@ ul#menu {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:#0C2D48;
+    background-color: #523A28;
     border-radius: 7px;
     width: auto;
     height: auto;
-    
     }
       
 ul#menu li a {
@@ -87,7 +96,7 @@ ul#menu li a {
       }
       
 ul#menu li a:hover {
-        background-color: rgb(255, 255, 255);
+        background-color: grey;
         display: inline;
       }
 
@@ -117,6 +126,11 @@ ul.productosdef{
     margin: 0 auto;
 }
 /* Estilos para las imagenes */
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 img{
     width: 300px;
     height: 110px;
@@ -146,7 +160,7 @@ img.tabla{
     height: 250px;
 }
 img.Productimg{
-    width: 250px; 
+    width: 275px; 
     height: 250px;
     text-align: center;
 }
@@ -173,7 +187,7 @@ section.rowPack {
     columns: 1;
     width: auto;
     height: auto;
-    background-image: linear-gradient(180deg, #184f7c ,  #B1D4E0);
+    background-image: linear-gradient(180deg, #B68D40 , #F4EBD0);
     border-radius: 7px;
 }
 
@@ -192,6 +206,11 @@ article.columnslist{
     margin-left: auto;
 }
 
+article.inicio{
+    
+    border-radius: 7px;
+    padding: 20px;
+}
 
 section.columnfooter {
     clear: both;
@@ -199,6 +218,13 @@ section.columnfooter {
     width: 33.33%;
     flex: 50%;
     width: 100%;
+}
+div.container{
+    position: relative;
+    width: 100%;
+    display: block;
+    
+    border-radius: 7px;
 }
 div.Packname{
     text-align: center;
@@ -273,22 +299,22 @@ div.galeria {
 
 /* Estilos para los enlaces */
 a:visited {
-    color: #3b2870;
+    color: #523A28;
 }
   
 a:focus {
     border-bottom: 1px solid;
-    background: #0C2D48;
+    background: #523A28;
 }
   
 a:hover {
     border-bottom: 1px solid;     
-    background:  #0C2D48;
+    background: #523A28;
 }
   
 a:active {
-    background: #0C2D48;
-    color: #0C2D48;
+    background: #523A28;
+    color: #523A28;
 }
 /* Estilos para el footer */
 footer {
@@ -298,7 +324,7 @@ footer {
     right: 0;
     left: 0;
     padding: 1rem;
-    background-color:  #2E8BC0;
+    background-color:  #D6AD60;
     clear:both;
     color: #fff;
     border-radius: 7px;

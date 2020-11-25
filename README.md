@@ -1,5 +1,7 @@
 # Plumbus Packs
 
+![Imagen de nuestro logo](docs/WEB/imagenes/logo.png)
+
 ## Proyecto
 
 Hola a todos y a todas, este es el proyecto de Web Scrapping realizado en el curso 2020-2021 en Borja Moll.

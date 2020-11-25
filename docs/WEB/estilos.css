@@ -204,10 +204,20 @@ section.rowPack {
     background-image: linear-gradient(180deg, #B68D40 , #F4EBD0);
     border-radius: 7px;
 }
-article.Eventos{
-
+article.Packtype{
+    width: auto;
+    height: auto;
+    text-align: justify;
+    float: left;
+    margin: 20px;
 }
-
+article.thematic{
+    width: auto;
+    height: auto;
+    text-align: justify;
+    float: left;
+    margin: 20px;
+}
 article.column1{
     width: auto;
     height: auto;
@@ -251,7 +261,7 @@ div.container2{
     display: block;
     border-radius: 7px;
 }
-div.Packname{
+div.Packtype{
     text-align: center;
 }
 div.Packimg{

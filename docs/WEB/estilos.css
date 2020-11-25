@@ -9,14 +9,26 @@ body{
     max-width: 85%;
     background-color: #F4EBD0;
 }
-marquee {
+div.marquee {
+    width: 100%;
     height: auto;
     overflow: hidden;
     position: relative;
     background:#D6AD60;
     color: #333;
     border-radius: 7px;
-    
+}
+.marquee p {
+    display: inline-block;
+    animation: marquee 8s linear infinite;
+    direction: left ;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+header{
+    text-align: center;
 }
 /* Estilos para los títulos */
 h1{
@@ -26,6 +38,7 @@ h1{
 h2{
     font-size: 32px;
     clear: both;
+    text-align: center;
 }
 h3{
     font-size: 28px;
@@ -35,6 +48,7 @@ h3{
 }
 h4{
     font-size: 22px;
+    text-align: center;
     clear: both;
 }
 h5{
@@ -129,6 +143,7 @@ ul.productosdef{
     display: block;
     width: 100%;
     height: auto;
+    text-align: center;
 }
 img{
     width: 300px;
@@ -226,6 +241,7 @@ div.container{
     width: 100%;
     display: block;
     border-radius: 7px;
+    text-align: center;
 }
 div.container2{
     position: relative;

@@ -1,6 +1,6 @@
 # Plumbus Packs
 
-![Imagen de nuestro logo](docs/WEB/imagenes/logo.png)
+![Imagen de nuestro logo](docs/imagenes/logo.png)
 
 ## Proyecto
 

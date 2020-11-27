@@ -1,30 +1,21 @@
 import urllib.request
 list_links = []
-url = "index.html"
+url = "index.html" #Cambiar página si es necesario
 
 def gethtml(url,webpage="https://ianmercadal.github.io/PlumbusPacks/"):
     try:
         request = urllib.request.urlopen(webpage + url)
     except:
         print(webpage + url)
-    #si tiene el charset puesto:
-    #html = request.read().decode(request.headers.get_content_charset())
-    #si no:
     html = request.read().decode('utf-8')
     return html
 
 
 def get_next_link(page):
-    #encuentra el primer enlace desde la posición 0 
-    #del parámetro "page"
     start_link = page.find('<a href=')
-    #si no lo encuetra me asigna nada en la URL
-    #y 0 en la posición
     if start_link == -1:
         url = None
         end_quote = 0
-    #si lo encuentra, entonces me busca el enlace entre la etiqueta
-    #<a> HTML, cambia el parámatero
     else:
         start_quote = page.find('"', start_link)
         end_quote = page.find('"', start_quote + 1)

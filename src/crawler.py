@@ -21,6 +21,11 @@ def get_next_target(page):
     url = page[start_quote + 1:end_quote]
     return url, end_quote
 
+def union(p, q):
+    for e in q:  
+        if e not in p: 
+            p.append(e)
+            
 def get_all_links(page):
     while True:
         url, endpos = get_next_target(page)
@@ -32,11 +37,6 @@ def get_all_links(page):
     Links = list(dict.fromkeys(list_links))
     print(Links)
     return list_links
-
-def union(p, q): # Comprueba que los links están en tocrawl uno por uno, de cada página que crawleamos.
-    for e in q: # para link en tocrawl  
-        if e not in p: # si no está
-            p.append(e)# añadelo
 
 def crawl_web(seed):
     crawled = []
@@ -51,7 +51,7 @@ def crawl_web(seed):
 if __name__ == "__main__":
     #assert (url) == 'https://ianmercadal.github.io/PlumbusPacks/'
     #assert get_next_target() == ""
-    #assert get_all_pages == ""
+    #assert get_all_links() == ""
     #assert crawl_web() == ['https://ianmercadal.github.io/PlumbusPacks/', 'blogs.html', 'productos.html', 'packs.html', 'packdeluxe.html', 'packpremium.html', 'packmedio.html', 'packeconomico.html', 'packtacano.html', 'index.html']
     assert crawl_web("https://ianmercadal.github.io/PlumbusPacks/index.html") == ['index.html', 'packs.html', 'productos.html', 'blogs.html']
     #assert (list_links) == []

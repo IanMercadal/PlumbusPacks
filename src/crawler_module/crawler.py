@@ -54,6 +54,7 @@ def crawl_web(seed):
     Links = list(dict.fromkeys(crawled))
     print(Links)
     return crawled
+    #.\venv\scripts\activate
 
 if __name__ == "__main__":
     assert (url) == 'https://ianmercadal.github.io/PlumbusPacks/'

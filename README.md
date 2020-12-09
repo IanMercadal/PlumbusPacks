@@ -19,7 +19,8 @@ Una vez hecho esto, ya lo tendriamos el repositorio en nuestro equipo. La guía 
 
 En este apartado explicaremos como ejecutar las funcionalidades del programa.
 
-1. Primero de todo debemos ir al src y ejecutar el archivo ...
+1. Primero de todo debemos ejecutar el venv.
+2. Respectivamente vamos a la carpeta src y si queremos utilizar el crawl, nos dirigimos al crawler_module y ejecutamos con Python el archivo crawler.py. Si queremos utilizar el scraper, nos dirigimos a scraper_module y ejecutamos scraper.py. 
 
 ## Autores
 

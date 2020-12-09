@@ -1,60 +1,60 @@
 import urllib.request
 list_links = []
-url = "packs.html"
+url = "https://ianmercadal.github.io/PlumbusPacks/"
 
-def gethtml(url,webpage="https://ianmercadal.github.io/PlumbusPacks/"):
-    try:
-        request = urllib.request.urlopen(webpage + url)
-    except:
-        print(webpage + url)
-    #si tiene el charset puesto:
-    #html = request.read().decode(request.headers.get_content_charset())
-    #si no:
-    html = request.read().decode('utf-8')
-    return html
+def get_page(url):
+    absoluta = "https://ianmercadal.github.io/PlumbusPacks/" 
+    if url.find("http") == -1:
+        url = absoluta + url
+    request = urllib.request.urlopen(url)
+    url = request.read().decode("utf-8")
+    return url
 
 
-def get_next_link(page):
-    #encuentra el primer enlace desde la posición 0 
-    #del parámetro "page"
-    start_link = page.find('<a href=')
-    #si no lo encuetra me asigna nada en la URL
-    #y 0 en la posición
+def get_next_target(page):
+    start_link = page.find("<a href=")
     if start_link == -1:
-        url = None
-        end_quote = 0
-    #si lo encuentra, entonces me busca el enlace entre la etiqueta
-    #<a> HTML, cambia el parámatero
-    else:
-        start_quote = page.find('"', start_link)
-        end_quote = page.find('"', start_quote + 1)
-        url = page[start_quote + 1:end_quote]
+        return None, 0
+    start_quote = page.find('"', start_link)
+    end_quote = page.find('"', start_quote + 1)
+    url = page[start_quote + 1:end_quote]
     return url, end_quote
 
 
-def print_all_links(page):
+def get_all_links(page):
     while True:
-        url, endpos = get_next_link(page)
+        url, endpos = get_next_target(page)
         if url:
-            if url == '#' or url in list_links or ".." in url:
-                page = page[endpos+1:]
-                continue
-            else:
-                list_links.append(url)
-                page = page[endpos:]
+            list_links.append(url)
+            page = page[endpos:]
         else:
             break
-
-def get_all_pages(list_links):
-    for url in list_links:
-        page = gethtml(url)
-        print_all_links(page)
-        list_links = list(set(list_links))
-
-page = gethtml(url)
-print_all_links(page)
-print(list_links)
+    return list_links
 
 
-get_all_pages(list_links)
-print(list_links)
+def union(p, q):
+    if type(p) != list or type(q) != list:
+        return False
+    for e in q:  
+        if e not in p: 
+            p.append(e)
+            
+
+def crawl_web(seed):
+    crawled = []
+    tocrawl = [seed]
+    Unwanted_links = [seed,"https://ianmercadal.github.io/PlumbusPacks/blogs.html", "https://ianmercadal.github.io/PlumbusPacks/productos.html"]
+    while tocrawl:
+        page = tocrawl.pop()
+        if page not in crawled:
+            union(tocrawl, get_all_links(get_page(page)))
+            crawled.append(page)
+        else:
+            pass
+    Links = list(dict.fromkeys(crawled))
+    print(Links)
+    return crawled
+
+if __name__ == "__main__":
+    assert (url) == 'https://ianmercadal.github.io/PlumbusPacks/'
+    assert crawl_web("https://ianmercadal.github.io/PlumbusPacks/index.html") == ['https://ianmercadal.github.io/PlumbusPacks/index.html', 'blogs.html', 'productos.html', 'packs.html', 'packdeluxe.html', 'packpremium.html', 'packmedio.html', 'packeconomico.html', 'packtacano.html', 'index.html']

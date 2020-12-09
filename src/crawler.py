@@ -1,6 +1,6 @@
 import urllib.request
 list_links = []
-url = "index.html"
+url = "packs.html"
 
 def gethtml(url,webpage="https://ianmercadal.github.io/PlumbusPacks/"):
     try:
